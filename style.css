@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: white;
+}
+
+/* general text styling */
+h1{
+    font-family: 'Bevan', cursive;
+    font-size: 1.4rem;
+}
+p{
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1rem;
+}
+
+
+/* CONTAINERS FOR CARDS */
+.cardcontainer{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+.column{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.left, .mid{
+    width: 25vw;
+}
+.right{
+    width: 50vw;
+}
+
+.Contain{
+    position: relative;
+}
+.aboutMe.Contain{
+    height: 50vh;
+    width: 100%;
+}
+.git.Contain{
+    height: 100%;
+    width: 50%;
+}
+.spotify.Contain{
+    height: 25vh;
+    width: 100%;
+}
+.linkedIn.Contain{
+    height: 100%;
+    width: 50%;
+}
+.shortContainer{
+    height: 25vh;
+    display: flex;
+}
+.tallContainer{
+    height: 50vh;
+    display:flex;
+}
+.code.Contain{
+    height: 62vh;
+    width: 100%;
+}
+.lab.Contain{
+    height: 38vh;
+    width: 100%;
+}
+.location.Contain{
+    height: 100%;
+    width: 50%;
+}
+.work.Contain{
+    height: 100%;
+    width: 50%;
+}
+.design.Contain{
+    height: 100%;
+    width: 66%;
+}
+.theater.Contain{
+    height: 100%;
+    width: 34%;
+}
+.connect.Contain{
+    height: 25vh;
+    width: 100%;
+}
+
+/* GENERAL CARD STYLING */
+.card{
+    z-index: 5;
+    border-radius: 30px;
+    top: 5px;
+    left: 5px;
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    /* position: absolute; */
+}
+
+/* CARD COVER STYLING */
+
+.content{
+    position: absolute;
+    z-index: 4;
+    top: 5px;
+    left: 5px;
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    background-color: rgb(255, 255, 255);
+    border-radius: 30px; 
+    display: flex;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.innerContent{
+    height: 95%;
+    width: 95%;
+    margin: auto;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+
+}
+.iconContain{
+    width: 30%;
+    height: auto;
+    margin: auto;
+    text-align: center;
+}
+
+
+/* In general, this CSS handles the hover animations that occur on each card */
+.Contain.aboutMe:hover  .aboutMe.card{
+    animation: in .5s;
+    animation-fill-mode: forwards;
+}
+.Contain.aboutMe > .aboutMe.card{
+    animation: out 1s;
+    animation-fill-mode: forwards
+}
+.Contain.linkedIn:hover  .linkedIn.card{
+    animation: in .5s;
+    animation-fill-mode: forwards;
+}
+.Contain.linkedIn > .linkedIn.card{
+    animation: out 1s;
+    animation-fill-mode: forwards
+}
+.Contain.git:hover  .git.card{
+    animation: in .5s;
+    animation-fill-mode: forwards;
+}
+.Contain.git > .git.card{
+    animation: out 1s;
+    animation-fill-mode: forwards
+}
+
+@keyframes in {
+    0% { transform: scale(1);}
+    100% { transform: scale(0);}
+}
+@keyframes out{
+    from { transform: scale(0);}
+    to { transform: scale(1);}
+}
+/* CARDS */
